@@ -1,29 +1,60 @@
-# cli3-template
+# finance-admin
 
-## Project setup
-```
-npm install
+### setup
+
+`npm i`
+
+
+### run
+
+`npm run dev`
+
+
+
+### build
+
+`npm run build`
+
+
+### 目录结构
+```js
+src
+ └── modules
+     ├── B
+     │   ├── mixins // 可选
+     │   ├── components // 可选
+     │   ├── constant // 可选
+     │   ├── services // 必要
+     │   ├── store // 必要
+     │   ├── views // 必要
+     │   └── routes // 必要
+     └── A
+         └── modules
+             ├── A-2
+             └── A-1
+                 └── modules
+                     └── A-1-1
 ```
 
-### Compiles and hot-reloads for development
+### 推荐工作流
+![](https://i.loli.net/2020/08/17/zB6nYD9JCAiG7j4.png)
+#### store.js
+```js
+{
+  actions: {
+    async deleteById(_, payload) {
+      const res = await fetchApi.delete()
+      if (res.success) {
+        return '删除成功'
+      }
+    }
+  }
+}
 ```
-npm run serve
+#### index.vue
+```js
+async function delateBtn(id) {
+  const msg = await deleteById(id)
+  this.$message.success(msg)
+}
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-* icon
-命名规则: icon-【circle圆、square方，可选】-【名称(动词/形容词/名词)】-【line，fill可选】这种名称就很标准
