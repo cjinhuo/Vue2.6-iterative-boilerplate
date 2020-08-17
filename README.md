@@ -1,4 +1,5 @@
-# finance-admin
+# Vue2.6企业模板推荐
+[掘金文章地址](https://juejin.im/post/6857028645534793735)
 
 ### setup
 
