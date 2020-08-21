@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import BaseLayout from '@/layouts/BaseLayout'
 import NotFoundComponent from '@/components/NotFoundComponent'
-import EnterpriceService from '@/modules/EnterpriceService/routes'
+import Demo from '@/modules/Demo/routes'
+import login from '@/modules/Login/routes'
 Vue.use(Router)
 
 export default new Router({
@@ -11,14 +12,10 @@ export default new Router({
       path: '/',
       name: 'BaseLayout',
       component: BaseLayout,
-      redirect: { name: 'enterpriceService' },
-      children: [EnterpriceService]
+      redirect: { name: Demo.name },
+      children: [Demo]
     },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('@/modules/Login')
-    },
+    login,
     {
       path: '*',
       component: NotFoundComponent

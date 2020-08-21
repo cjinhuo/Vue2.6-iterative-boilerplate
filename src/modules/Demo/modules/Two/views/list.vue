@@ -1,19 +1,15 @@
 <template lang="pug">
-  div 账户管理
+  div demo-2
 </template>
 
 <script>
 export default {
-  name: "AccountList",
+  name: 'AccountList',
   data() {
-    return {
-    }
+    return {}
   },
   methods: {}
-  
 }
 </script>
 
-<style lang="less" scoped>
-
-</style>
+<style lang="less" scoped></style>

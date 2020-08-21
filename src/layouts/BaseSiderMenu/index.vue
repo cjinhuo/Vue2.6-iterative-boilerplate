@@ -1,5 +1,5 @@
 <script type="text/jsx">
-import {EnterpriceService} from '@/router/routerFilter'
+import {Demo} from '@/router/routerFilter'
 export default {
     name: 'BaseSiderMenu',
     data() {
@@ -42,11 +42,9 @@ export default {
             return []
         },
         init() {
-          console.log(this.$route.path)
             const currentPath = this.$route.path
             // const originMenuData = this.upFindRouterObject()
-            const originMenuData = EnterpriceService
-            console.log(EnterpriceService)
+            const originMenuData = Demo
             this.menuData = JSON.parse(JSON.stringify(originMenuData.children))
             this.filterMenuData(this.menuData)
             this.findPath(currentPath)

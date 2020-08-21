@@ -1,6 +1,5 @@
 <template lang="pug">
-  .login-container
-    el-button login
+  .login-container login page
 
 </template>
 

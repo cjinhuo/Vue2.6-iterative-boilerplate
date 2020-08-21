@@ -15,12 +15,13 @@ export default {
   components: {
     GlobalHeader,
     ContentLayout: {
-            render() {
-                const { meta: { hideMenuLayout = false } } = this.$route
-                console.log(hideMenuLayout)
-                return hideMenuLayout ? <BlankLayout/> : <MenuLayout/>
-            }
-        }
+      render() {
+        const {
+          meta: { hideMenuLayout = false }
+        } = this.$route
+        return hideMenuLayout ? <BlankLayout /> : <MenuLayout />
+      }
+    }
   }
 }
 </script>

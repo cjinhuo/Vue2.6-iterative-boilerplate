@@ -1,6 +1,6 @@
 // import
 const UPDATE_STATE = 'UPDATE_STATE'
-import { getRiskAssessmentTable } from '../services'
+import { getSomething } from '../services'
 export default {
   namespaced: true,
   state: {},
@@ -10,8 +10,8 @@ export default {
     }
   },
   actions: {
-    async getRiskAssessmentTable(_, payload) {
-      const res = await getRiskAssessmentTable(payload)
+    async getSomething(_, payload) {
+      const res = await getSomething(payload)
       return res
     }
   }

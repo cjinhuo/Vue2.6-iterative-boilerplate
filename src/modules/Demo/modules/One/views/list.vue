@@ -1,11 +1,11 @@
 <template lang="pug">
-  .risk-assessment 用户评估服务
+  .risk-assessment demo-1
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 export default {
-  name: 'RiskAssessmentList',
+  name: 'OneList',
   data() {
     return {}
   },

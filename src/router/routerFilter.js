@@ -1,14 +1,12 @@
-import EnterpriceService from '@/modules/EnterpriceService/routes'
+import Demo from '@/modules/Demo/routes'
 
 // 尾递归 不会爆栈
 // 将每个router对象中path修改成完整路径
 function completePath(item) {
-  console.log(item)
   if (item.children) {
     item.children.forEach((value) => {
       if (value.path && !value.path.includes('/')) {
         value.path = `${item.path}/${value.path}`
-        console.log(value)
       }
       if (value.children) {
         return completePath(value)
@@ -25,5 +23,5 @@ function completePath(item) {
 //   }
 // })
 
-completePath(EnterpriceService)
-export { EnterpriceService }
+completePath(Demo)
+export { Demo }
